@@ -67,7 +67,7 @@ class APK:
         else:
 	    try:
                 self.zip = zipfile.ZipFile(StringIO.StringIO(self.__raw))
-            except:
+            except Exception:
                 self.zip = zipfile.ZipFile(BytesIO(self.__raw))
         # CHECK if there is only one embedded file
         #self._reload_apk()
