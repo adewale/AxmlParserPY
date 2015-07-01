@@ -65,7 +65,7 @@ class APK:
         if ZIPMODULE == 0:
             self.zip = ChilkatZip(self.__raw)
         else:
-	    try:
+            try:
                 self.zip = zipfile.ZipFile(StringIO.StringIO(self.__raw))
             except Exception:
                 self.zip = zipfile.ZipFile(BytesIO(self.__raw))
