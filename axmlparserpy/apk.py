@@ -253,12 +253,12 @@ class APK:
         return self.get_elements("provider", "android:name")
     providers = property(get_providers)
 
-   # def get_permissions(self):
-    #    """
-     #       Return permissions
-      #  """
-       # return self.permissions
-   # permissions = property(get_permissions)
+    def get_permissions(self):
+        """
+           Return permissions
+        """
+        return self.permissions
+    # permissions = property(get_permissions)
 
     def get_min_sdk_version(self):
         """
