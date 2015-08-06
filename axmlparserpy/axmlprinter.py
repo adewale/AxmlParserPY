@@ -50,10 +50,10 @@ class AXMLPrinter:
                 for i in range(0, self.axml.getAttributeCount()):
                     self.buff += "%s%s=\"%s\"\n" % (self.getPrefix(self.axml.getAttributePrefix(i)), self.axml.getAttributeName(i), self.getAttributeValue(i))
 
-                self.buff += ">\n"
+                self.buff += ">"
 
             elif _type == tc.END_TAG:
-                self.buff += "</%s%s>\n" % (self.getPrefix(self.axml.getPrefix()), self.axml.getName())
+                self.buff += "</%s%s>" % (self.getPrefix(self.axml.getPrefix()), self.axml.getName())
 
             elif _type == tc.TEXT:
                 self.buff += "%s\n" % self.axml.getText()
