@@ -13,15 +13,13 @@ def main():
   if len(sys.argv) != 2:
     print USAGE
     exit(1)
-
+  
   filename = sys.argv[1]
   apk_file = axmlparserpy.apk.APK(filename)
 
-  manifest_contents = apk_file.get_file("AndroidManifest.xml")
+  manifest_contents = apk_file.raw_manifest
 
-
-  ap = axmlprinter.AXMLPrinter(manifest_contents)
-  buff = minidom.parseString(ap.getBuff()).toprettyxml()
+  buff = minidom.parseString(manifest_contents).toprettyxml()
   print(buff)
 
 if __name__ == "__main__":

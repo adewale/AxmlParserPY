@@ -2,9 +2,10 @@
 
 from axmlparserpy import axmlprinter
 from xml.dom import minidom
+import sys
 
 def main():
-  ap = axmlprinter.AXMLPrinter(open('example/binary/AndroidManifest.xml', 'rb').read())
+  ap = axmlprinter.AXMLPrinter(open(sys.argv[1], 'rb').read())
   buff = minidom.parseString(ap.getBuff()).toxml()
   print(buff)
 
