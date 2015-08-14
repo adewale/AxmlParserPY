@@ -6,7 +6,7 @@ from xml.dom import minidom
 import sys
 import axmlparserpy.apk
 
-USAGE = """python apk_manifest.py PATH_TO_APK"""
+USAGE = """python manifest.py PATH_TO_APK"""
 
 
 def main():
